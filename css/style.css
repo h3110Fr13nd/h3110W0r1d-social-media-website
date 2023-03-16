@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #0d1117;
+}
+.main{
+    width: 100vw;
+    /* align-items to right side */
+    /* justify-content: flex-end;    */
+    display: flex;
+
+    /* align-items: center; */
+
+}
+.navigation1 ul{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navigation1{
+    width: fit-content;
+    height: 100vh;
+    padding: 5px,20px;
+    /* position: fixed; */
+    /* background: violet; */
+    border-right: 3px solid #4d5157;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #0d1117;
+
+}
+.nav-links1 li:hover{
+    background: #4d5157;
+    border-radius: 1em;
+}
+
+.nav-links1 li{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    padding: 3px 10px 3px 10px;
+    /* justify-content: center; */
+}
+.nav-links1 a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 1em;
+    transition: all 0.3s ease;
+}
+.nav-links1 img{
+    height: 1.5em;
+    /* transform: translateY(9px); */
+    padding-right: 10px;
+}
+
+
+.more-option{
+    position: absolute !important;
+    bottom: 0 !important;
+    width: 100%;
+}
+
+
+
+
+.suggestion-box{
+    width: 20vw;
+    height: 100vh;
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* position: fixed; */
+}
+.logo{
+    padding: 30px 10px 30px 10px;
+    height: 5em;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+
+}
+@media screen and (max-width: 900px) {
+    .nav-links1 a span{
+        display: none;
+    }
+    .logo{
+        background-image: url("../img/logo-sm.png");
+        
+    }
+
+    .dropdown-menu{
+        width: inherit !important;
+    }
+}
+
+ul.dropdown-menu{
+    background-color: #353637;
+    font-size: 0.8em;
+}
+
+li.dropdown-toggle::after{
+    display: none !important;
+}
+
+
+
+/*
+Main Content CSS
+*/
+
+.main-content{
+    background: red;
+    height: 100vh;
+    /* position: fixed; */
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+}
+.main-content-container{
+    width: 100%;
+    max-width: 630px;
+    height: 100vh;
+    
+}
+
