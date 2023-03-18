@@ -139,6 +139,9 @@ li.dropdown-toggle::after{
 /*
 Main Content CSS
 */
+::-webkit-scrollbar {
+    display: none;
+}
 
 .main-content{
     background: #0d1117;
@@ -156,6 +159,8 @@ Main Content CSS
     max-width: 630px;
     height: 100vh;
     border-right: 2px solid #4d5157;
+    overflow-y: scroll;
+
 }
 
 .mystory-img, .otherstory-img{
@@ -196,7 +201,7 @@ Main Content CSS
 
 .stories{
     display: flex;
-    overflow-x: hidden;
+    overflow-x: scroll;
     border-bottom: 2px solid #1c1d1e;
 }
 .mystory-text, .otherstory-text{
