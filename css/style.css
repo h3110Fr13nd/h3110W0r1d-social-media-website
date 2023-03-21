@@ -18,8 +18,9 @@ body{
 }
 
 .navigation1{
+    /* min-width: 210px; */
     float: left;
-    width: fit-content;
+    width: 250px;
     height: 100vh;
     padding: 8px 12px 20px 12px;
     /* position: fixed; */
@@ -155,10 +156,11 @@ Main Content CSS
 }
 .main-content-container{
     width: 100% ;
-    max-width: 630px;
+    max-width: 800px;
     height: 100vh;
-    border-right: 2px solid #4d5157;
+    /* border-right: 2px solid #4d5157; */
     overflow-y: scroll;
+    padding-right: 100px;
 
 }
 
@@ -202,6 +204,7 @@ Main Content CSS
     display: flex;
     overflow-x: scroll;
     border-bottom: 2px solid #1c1d1e;
+    padding: 16px 0px;
 }
 .mystory-text, .otherstory-text{
     max-width: 70px;
@@ -210,9 +213,10 @@ Main Content CSS
     white-space: nowrap;
 }
 .post{
-    width:80%;
+    width: 80%;
     margin: auto;
 }
+
 .post-image>img{
     width: 100%;
 }
@@ -244,12 +248,13 @@ Main Content CSS
 /* Suggestion Box CSS */
 
 .suggestion-box{
+    padding: 2em;
     width: 20vw;
     height: 100vh;
     background: #0d1117;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     flex-direction: column;
     
     float: right;
@@ -261,4 +266,95 @@ Main Content CSS
     .suggestion-box{
         display: none;
     }
+    .main-content-container{
+        padding-right: 0px;
+    }
 }
+
+
+
+.myprofile, .otherprofile{
+    display: flex;
+}
+.myprofile-text, .otherprofile-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.myprofile-text p, .otherprofile-text p{
+    color: #4d5157;
+    font-size: 0.8em;
+    text-align: left;
+}
+.myprofile-img img{
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+}
+
+.otherprofile-img img{
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+}
+
+.switch, .follow{
+    color: rgb(74, 74, 216);
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.suggestion-header{
+    display: flex;
+}
+.suggestion-header p:nth-child(2){
+    display: inline;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.otherprofile p{
+    margin-bottom: 5px;
+}
+
+.tab-menu{
+    display: none;
+    justify-content: space-evenly;
+    padding: 0px 10px;
+    border-bottom: 2px solid #1c1d1e;
+    height: 3em;
+}
+.tab-menu img{
+    padding-top: 5px;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    border: 3px solid #0d1117;
+}
+
+.main-content-header .logo{
+    padding: 30px 10px 30px 10px;
+    height: 1.5em;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-size: auto 2em;
+    background-position: 20px 13px;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation1{
+        display: none;
+    }
+    .main-content{
+        flex-direction: column;
+    }
+    .tab-menu{
+        display: flex;
+    }
+}
+
+
