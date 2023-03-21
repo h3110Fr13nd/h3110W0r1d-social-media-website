@@ -226,17 +226,28 @@ Main Content CSS
     justify-content: space-between;
 }
 
+.post-header .profile-name-text{
+    /* font-weight: 600; */
+    font-size: 1em;
+}
 .post-header-left{
     display: flex;
     align-items: center;
 }
 
 .post-header img{
-    width: 32px;
-    height: 32px;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 50%;
     border: 3px solid #0d1117;
     
+}
+
+.post-header .post-time{
+    color: #6c727a;
+}
+.post-header .post-time {
+    font-size: 0.8em;
 }
 
 .post-likes{
@@ -251,6 +262,7 @@ Main Content CSS
     padding: 2em;
     width: 20vw;
     height: 100vh;
+    min-width: 300px;
     background: #0d1117;
     display: flex;
     /* justify-content: center; */
@@ -344,6 +356,20 @@ Main Content CSS
     background-size: auto 2em;
     background-position: 20px 13px;
 }
+#load-more {
+    width: 100%;
+    height: 50px;
+    background: #2d2f32;
+    border: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
 
 @media screen and (max-width: 768px) {
     .navigation1{
@@ -356,5 +382,3 @@ Main Content CSS
         display: flex;
     }
 }
-
-
