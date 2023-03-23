@@ -58,11 +58,12 @@ loadMore = () => {
     </div>
     <div class="post-likes">
       <div class="post-likes-left">
-        <span><img src="img/Screenshot 2023-03-19 004827.png" alt=""></span>
-        <span><img src="img/Screenshot 2023-03-19 004827.png" alt=""></span>
-        <span><img src="img/Screenshot 2023-03-19 004827.png" alt=""></span>
+        <div class="post-likes-left-icons"><span class="material-symbols-outlined">Favorite</span></div>
+        <div class="post-likes-left-icons"><span class="material-symbols-outlined">Chat</span></div>
+        <div class="post-likes-left-icons"><span class="material-symbols-outlined">Send</span></div>
+
       </div>
-      <span><img src="img/Screenshot 2023-03-19 004827.png" alt=""></span>
+      <div class="post-likes-left-icons"><span class="material-symbols-outlined">Bookmark</span></div>
     </div>
     <div class="post-caption">
       <span style="font-weight: bolder;">ABCXYZ </span>
@@ -71,10 +72,9 @@ loadMore = () => {
         illum voluptate, vero fugit nisi aut ducimus maxime architecto perspiciatis iste. Eius rerum facere
         laboriosam.</span>
 
-
     </div>
-
-  </div><hr>`
+    <hr>
+  </div>`
     postContainer.innerHTML += appendHTML;
 }
 
@@ -84,9 +84,34 @@ loadMorePosts = () => {
     }
 }
 
+generateSuggestions = () => {
+    let i = Math.floor(Math.random() * 100);
+    let name = generateName();
+    return `<div class="otherprofile">
+    <div class="otherprofile-img">
+      <img src="https://source.unsplash.com/random/100x100/?&${i}" alt="">
+    </div>
+    <span class="otherprofile-text">
+      ${name}
+      <p>${name.toLowerCase().replace(' ','_')}</p>
+    </span>
+    <span class="follow">
+      Follow
+    </span>
+  </div>`
+}
+
+loadSuggestions = () => {
+    let suggestionBox = document.getElementsByClassName("suggestion-box")[0];
+    for (let i = 0; i < 5; i++) {
+        suggestionBox.innerHTML += generateSuggestions();
+    }
+}
+
 window.onload = () => {
     loadMorePosts();
     loadMorePosts();
+    loadSuggestions();
 }
 
 

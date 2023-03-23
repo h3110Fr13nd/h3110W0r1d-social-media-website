@@ -13,10 +13,12 @@ body{
     width: 100vw;
 }
 .navigation1 ul{
-    margin: 0 !important;
+    margin: 20px 0px !important;
     padding: 0 !important;
 }
-
+.more-option ul{
+    padding: 20px !important;
+}
 .navigation1{
     /* min-width: 210px; */
     float: left;
@@ -25,7 +27,7 @@ body{
     padding: 8px 12px 20px 12px;
     /* position: fixed; */
     /* background: violet; */
-    border-right: 2px solid #4d5157;
+    border-right: 1px solid #4d5157;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -37,7 +39,7 @@ body{
 .nav-links1{
     padding-right: 30px;
 }
-.nav-links1 li a:hover{
+.nav-links1 li:hover{
     background: #2d2f32;
     border-radius: 1em;
 }
@@ -46,20 +48,31 @@ body{
     width: 100%;
     display: flex;
     align-items: baseline;
-    padding: 3px 10px 3px 10px;
+    padding: 7px 10px 4px 4px;
     /* justify-content: center; */
 }
-.nav-links1 a{
+.nav-links1 a, .tab-menu a{
+    display: flex;
     text-decoration: none;
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
-    padding: 10px;
+    padding: 7px 10px 7px 0px;
     border-radius: 1em;
-    transition: all 0.3s ease;
+    /* transition: initial 0.3s ease; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
 }
-.nav-links1 img{
-    height: 1.5em;
+
+
+
+
+.nav-links1 span.material-symbols-outlined, .tab-menu span.material-symbols-outlined{
+    font-size: 30px;
+    font-variation-settings: 'opsz' 30, 'wght' 200;
+    /* height: 1.5em; */
     /* transform: translateY(9px); */
     padding-right: 10px;
 }
@@ -72,8 +85,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-
-
 
 .logo{
     padding: 30px 10px 30px 10px;
@@ -89,21 +100,37 @@ body{
         width: 20%;
         max-width: 60px;
     }
-    .nav-links1 a span{
-        display: none;
+    .nav-links1 li:hover{
+        background: #0d1117;
     }
     
-    .nav-links1 img, .nav-links1 a, .nav-links1 li{
+    .nav-links1 ul:nth-child(1) a span.nav-text, .more-option .nav-text{
+        display: none; 
+    }
+    
+    .nav-links1 a span.material-symbols-outlined{
+        padding: 7px;
+        font-size: 30px;
+        font-variation-settings: 'opsz' 30, 'wght' 200;
+        
+    }
+    .nav-links1 a:hover span.material-symbols-outlined{
+        background: #6c727a;
+        border-radius: 50%;
+    }
+    
+    .nav-links1 img, .nav-links1 a, .nav-links1 ul:nth-child(1) li{
         border-radius: 50%;
         padding: 0px;
         align-items: center;
         justify-content: center;
     }
+
     .nav-links1 a{
-        padding: 4px 4px;
+        padding: 7px 4px;
     }
     .nav-links1 li{
-        padding: 9px 0px;
+        padding: 5px 0px;
     }
     .logo{
         background-image: url("../img/logo-sm.png");
@@ -124,6 +151,7 @@ body{
 ul.dropdown-menu{
     background-color: #353637;
     font-size: 0.8em;
+    width: 20em;
 }
 
 li.dropdown-toggle::after{
@@ -156,7 +184,7 @@ Main Content CSS
 }
 .main-content-container{
     width: 100% ;
-    max-width: 800px;
+    max-width: 630px;
     height: 100vh;
     /* border-right: 2px solid #4d5157; */
     overflow-y: scroll;
@@ -254,7 +282,33 @@ Main Content CSS
     display: flex;
     justify-content: space-between;
 }
+.post-likes-left{
+    padding: 10px 0;
+    display: flex;
+}
+.post-likes-left-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
+    margin: 0 5px;
+    height: 30px;
+    width: 30px;
+}
+.post-likes span.material-symbols-outlined{
+    vertical-align: middle;
+    font-size: 30px;
+    font-variation-settings: 'opsz' 25, 'wght' 200;
+    /* height: 1.5em; */
+    /* transform: translateY(9px); */
+    /* padding-right: 10px; */
+}
+
+.post-likes-left-icons:hover{
+    background: #6c727a;
+    border-radius: 50%;
+}
 
 /* Suggestion Box CSS */
 
@@ -309,8 +363,8 @@ Main Content CSS
 }
 
 .otherprofile-img img{
-    height: 1.5em;
-    width: 1.5em;
+    height: 2.2em;
+    width: 2.2em;
     border-radius: 50%;
 }
 
