@@ -31,7 +31,6 @@ Main Content CSS
     width: 100%;
     max-width: 630px;
 }
-
 .main-content{
     background: #0d1117;
     height: 100dvh;
@@ -42,7 +41,6 @@ Main Content CSS
     /* min-width: 630px; */
     justify-content: center;
     align-items: center;
-
 }
 .main-content-container{
     justify-content: center;
