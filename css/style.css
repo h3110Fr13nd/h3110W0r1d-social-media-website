@@ -34,11 +34,10 @@ Main Content CSS
 .main-content{
     background: #0d1117;
     height: 100dvh;
-    /* position: fixed; */
+    
     width: extend-to-end;
     display: flex;
-    /* float: left; */
-    /* min-width: 630px; */
+
     justify-content: center;
     align-items: center;
 }
@@ -162,9 +161,7 @@ Main Content CSS
     vertical-align: middle;
     font-size: 30px;
     font-variation-settings: 'opsz' 25, 'wght' 200;
-    /* height: 1.5em; */
-    /* transform: translateY(9px); */
-    /* padding-right: 10px; */
+
 }
 
 .post-likes-left-icons:hover{
@@ -257,7 +254,7 @@ Main Content CSS
 .main-content-header .logo{
     padding: 30px 10px 30px 10px;
     height: 1.5em;
-    background-image: url("../img/logo.png");
+    background-image: url("../img/instagram-logo.png");
     background-repeat: no-repeat;
     background-size: auto 2em;
     background-position: 20px 13px;

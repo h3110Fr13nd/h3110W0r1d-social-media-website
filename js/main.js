@@ -108,10 +108,33 @@ loadSuggestions = () => {
     }
 }
 
+loadStory = () => {
+    let storyContainer = document.getElementsByClassName("other-stories-box")[0];
+    let i = Math.floor(Math.random() * 100);
+    let name = generateName();
+    let story = `<div class="otherstory">
+    <div class="otherstory-img">
+      <img src="https://source.unsplash.com/random/100x100/?&${i}" alt="">
+    </div>
+    <span class="otherstory-text">
+      ${generateName()}
+    </span>
+  </div>`
+    storyContainer.innerHTML += story;
+}
+
+loadStories = () => {
+    for (let i = 0; i < 10; i++) {
+        loadStory();
+    }
+}
+
+
 window.onload = () => {
     loadMorePosts();
     loadMorePosts();
     loadSuggestions();
+    loadStories();
 }
 
 
