@@ -168,6 +168,23 @@ body {
     border-radius: 50%;
     border: 3px solid #0d1117;
 }
+.profile-info-name, .profile-info-bio{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.profile-options-button button{
+    background: #2d2f32;
+    border: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
 
 @media screen and (max-width: 768px) {
     .navigation1 {
